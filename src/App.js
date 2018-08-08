@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import TableContainer from './Table/TableContainer.jsx';
+
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Hello Sherlock</h1>
-        </header>
-        <p className="App-intro">
-          Let's make a table!
-        </p>
+        <TableContainer />
       </div>
     );
   }
