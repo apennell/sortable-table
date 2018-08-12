@@ -51,10 +51,17 @@ class TableContainer extends Component {
 	}
 
 	render() {
-		const columns = ['name', 'address', 'city', 'region', 'country', 'birthday'];
+		const columns = [
+			'name',
+			'address',
+			'city',
+			'region',
+			'country',
+			'birthday'
+		];
 
 		return (
-			<div>
+			<div className="table-container">
 				<table>
 					<thead>
 						<tr>
@@ -64,10 +71,15 @@ class TableContainer extends Component {
 									<button
 										onClick={this.handleSort(column)}
 										value={column}
-										className={this.state.sortBy === column ? "active" : ""}
 									>
-										<i className={this.state.sortBy === column && !this.state.ascending ?
-																	"fa fa-sort-up" : "fa fa-sort-down"} />
+										{this.state.sortBy === column ?
+											<span className="fa-stack">
+											  <i className="fas fa-sort fa-stack-1x"></i>
+											  <i className={`fas fa-stack-1x fa-sort-${this.state.ascending ? 'down' : 'up'}`}></i>
+											</span>
+										:
+											<i className={"fa fa-sort"} />
+										}
 									</button>
 								</th>
 							))}

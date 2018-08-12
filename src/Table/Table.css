@@ -1,11 +1,51 @@
+body {
+  color: #424242;
+  font-size: 14px;
+}
+
+.table-container {
+  margin: 15px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  white-space: nowrap;
+}
+
+tbody tr:hover {
+  background-color: rgba(41,199,149,0.2);
+}
+
+th,
+td {
+  text-align: left;
+  padding: 12px;
+}
+
+th {
+  text-transform: uppercase;
+  border-bottom: 2px solid #29c795;
+  vertical-align: bottom;
+}
+
+td {
+  border-top: 1px solid #d2d2d2;
+  vertical-align: top;
+}
+
+
+/* Remove user agent button styling */
+/* Icon button should appear as icon only */
 button {
   display: inline-block;
   border: none;
-  padding: 1rem 2rem;
+  padding: 0;
   margin: 0;
   text-decoration: none;
   background: transparent;
-  color: grey;
+  color: #d2d2d2;
   font-family: sans-serif;
   font-size: 1rem;
   cursor: pointer;
@@ -17,15 +57,26 @@ button {
 }
 
 button:hover,
-button:focus {
-  color: black;
+button:focus,
+button:active {
+  color: #d2d2d2;
 }
 
 button:focus {
   outline: none;
 }
 
-th,
-td {
-  text-align: left;
+/* Sort icon with up + down arrows; always visible */
+button i.fa-sort {
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle;
+}
+
+/* Darker icon on top of lighter one */
+/* Present on current sort category header, indicating order */
+button i.fa-sort-up,
+button i.fa-sort-down {
+  color: #29c795;
 }
