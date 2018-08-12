@@ -67,11 +67,11 @@ class TableContainer extends Component {
 						<tr>
 							{columns.map((column, index) => (
 								<th key={`col-${index}`}>
-									{column}
 									<button
 										onClick={this.handleSort(column)}
 										value={column}
 									>
+										{column}
 										{this.state.sortBy === column ?
 											<span className="fa-stack">
 											  <i className="fas fa-sort fa-stack-1x"></i>
