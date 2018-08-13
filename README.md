@@ -28,7 +28,7 @@ This app's core technologies are ReactJS, Javascript/ES6, HTML, CSS, and JSON. T
   The `TableContainer` component builds a table using HTML's `table` element and has basic styling.
 
 * The table should display the names, addresses, cities, regions, countries, and DOBs of the people in the stubbed data file.
-  The `TableContainer` imports the data and maps through the people in the JSON, adding a row to the table for each person.
+  The `TableContainer` imports the data and maps through the people in the JSON, adding a row to the table for each person. To handle the table's responsiveness, I chose to display it with a horizontal scroll for overflow to so that the readability of the data isn't compromised by become too narrow. The  `table` is set to a `max-height` of 100% of the viewer's height so that the horizontal scrollbar is always visible if present.
 
 * Each column should be sortable.
   Clicking a table header column sorts and updates the table's ordering based on that column. If it's a different column than previously selected, it sorts in ascending order. Clicking the same column's header a second time reverses the order.
